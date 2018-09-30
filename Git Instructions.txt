@@ -1,0 +1,16 @@
+Git instructions:
+
+log in 
+git config --global user.email "email address"
+
+copy to local machine
+git clone <github location>
+
+add file to be uploaded
+git add <filename.filetype>
+
+commit changes before uploading
+git commit -m "commit comment"
+
+push changes for upload
+git push origin master (master is branch, can be changed to branch name)
