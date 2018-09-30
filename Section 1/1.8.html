@@ -1,0 +1,45 @@
+<!--This code helps Firefox determine what type of languages and content are in the document-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Contect-Type">
+	<meta content=utf-8" http-equiv="encoding">
+</head>
+<!--End Code-->
+
+<body>
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<!--Anything between script tags is javascript, can't use standard html such as <b> etc.-->
+<script>
+var canvas, canvasContext;
+var ballX = 75;
+
+window.onload = function()
+{
+	<!--Loads a blank canvas-->
+	canvas = document.getElementById('gameCanvas');
+	canvasContext = canvas.getContext('2d');
+	
+	var framesPerSecond = 30;
+	<!--Sets frames per second to 30. 1000ms/30.-->
+	setInterval(updateAll, 1000/framesPerSecond);
+	
+}
+
+function updateAll()
+{
+	ballX + 5;
+	
+	canvasContext.fillStyle = 'black';
+	canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+	
+	canvasContext.fillStyle = 'white';
+	canvasContext.beginPath();
+	canvasContext.arc(ballX, 100, 10, 0, Math.PI*2, true);
+	canvasContext.fill();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!--This code helps Firefox determine what type of languages and content are in the document-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Contect-Type">
+	<meta content=utf-8" http-equiv="encoding">
+</head>
+<!--End Code-->
+
+<body>
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<!--Anything between script tags is javascript, can't use standard html such as <b> etc.-->
+<script>
+var canvas, canvasContext;
+
+window.onload = function()
+{
+	<!--Loads a blank canvas-->
+	canvas = document.getElementById('gameCanvas');
+	canvasContext = canvas.getContext('2d');
+	
+	<!--Fills canvas with a black square-->
+	canvasContext.fillStyle = 'black';
+	<!--fillRect(start point width, start point height, width of rectangle, height of rectangle-->
+	canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+	
+	<!--Create white circle-->
+	canvasContext.fillStyle = 'white';
+	<!--No circle command so have to create an arc path-->
+	canvasContext.beginPath();
+	<!--arc(centre start point width, centre start point height, radius, distance to draw(PI*2 = full circle), true = clockwise/false = anti-clockwise)
+	canvasContext.arc(100, 100, 10, 0, Math.PI*2, true);
+	canvasContext.fill();
+}
+</script>
+
+</body>
+</html>
