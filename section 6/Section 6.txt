@@ -1,0 +1,4 @@
+This section was mostly ripping out the paddle from the brick breaker game and repurposing the ball and brick layouts.
+
+The ball will now become the car for the race car game as it already has collisons implemented on it and the map will now be
+hand crafted using numbers to associate different graphical elements 
