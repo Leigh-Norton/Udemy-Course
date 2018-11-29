@@ -1,0 +1,2 @@
+Section 11 dealt with creating wall and road images to use for the car game and loading these in through the code. 
+Not much code change here
